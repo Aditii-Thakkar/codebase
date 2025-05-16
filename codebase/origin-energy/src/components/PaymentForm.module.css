@@ -1,0 +1,36 @@
+.paymentContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.payBtn{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    color: red;
+    cursor: pointer;
+    flex-direction: column;
+    width: 100px;
+    margin: auto;
+    margin-top: 12px;
+}
+.amountInfo{
+    display: flex;
+    margin: 12px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.cardExpiryContainer{
+    display: flex;
+    width: 100%;
+}
+.cardExpiryInput{
+    width: 100%;
+}

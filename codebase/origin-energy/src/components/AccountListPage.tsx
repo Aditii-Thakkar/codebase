@@ -9,6 +9,8 @@ import type { Account, DueCharge } from '../types/AccountList';
 import { MOCK_ENERGY_ACCOUNTS_API } from '../mocks/energyAccountsAPIMock';
 import { MOCK_DUE_CHARGES_API } from '../mocks/dueChargesAPIMock';
 import { AccountCard } from './AccountCard';
+import Modal from './Modal';
+import { PaymentForm } from './PaymentForm';
 
 export const AccountListPage: FunctionComponent = (): ReactElement => {
   const [accounts, setAccounts] = useState<Account[]>([]);
@@ -37,6 +39,10 @@ export const AccountListPage: FunctionComponent = (): ReactElement => {
 
   const handleMakePayment = () => {
     setIsModalOpen((prev) => !prev);
+  };
+
+  const handleOnClose = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   const handleEnergyTypeFilter = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -74,9 +80,15 @@ export const AccountListPage: FunctionComponent = (): ReactElement => {
             account={account}
             balance={balance}
             handleMakePayment={handleMakePayment}
+            key={account.id}
           />
         );
       })}
+      {isModalOpen && (
+        <Modal onClose={handleOnClose}>
+          <PaymentForm />
+        </Modal>
+      )}
     </>
   );
 };
