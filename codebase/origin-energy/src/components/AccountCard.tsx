@@ -22,7 +22,7 @@ export const AccountCard: FunctionComponent<AccountCardProps> = ({
       <div className={styles.icon}>Icon</div>
       <div className={styles.accountHeader}>
         <div className={styles.accountInfo}>
-          <div className={styles.eneryType}>{account.type}</div>
+          <div className={styles.eneryType}>{account.type.toLowerCase()}</div>
           <div>{account.id}</div>
           <div className={styles.address}>{account.address}</div>
         </div>

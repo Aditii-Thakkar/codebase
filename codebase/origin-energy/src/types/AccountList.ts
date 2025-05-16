@@ -12,5 +12,3 @@ export type DueCharge = {
     date: string;
     amount: number
 }
-
-export type AccountWithAmount = Account & Pick<DueCharge, 'amount'>;

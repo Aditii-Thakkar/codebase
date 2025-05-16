@@ -16,6 +16,7 @@ export const PaymentHistoryPage: FunctionComponent = (): ReactElement => {
   const [filteredSearchData, setFilterSearchData] = useState<PaymentHistory[]>(
     []
   );
+
   useEffect(() => {
     MOCK_ENERGY_PAYMENT_HISTORY_API().then((data) => {
       setPayments(data);
@@ -27,8 +28,8 @@ export const PaymentHistoryPage: FunctionComponent = (): ReactElement => {
   const handleSearchByAddress = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const search = event.target.value;
-    setSearch(search);
+    const searchKeys = event.target.value;
+    setSearch(searchKeys);
     const filteredPaymentsByAddress = payments.filter((payment) =>
       payment.address.toLowerCase().includes(search.toLowerCase())
     );

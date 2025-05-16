@@ -10,7 +10,7 @@ import { MOCK_ENERGY_ACCOUNTS_API } from '../mocks/energyAccountsAPIMock';
 import { MOCK_DUE_CHARGES_API } from '../mocks/dueChargesAPIMock';
 import { AccountCard } from './AccountCard';
 import Modal from './Modal';
-import { PaymentForm } from './PaymentForm';
+import { PaymentFormModal } from './PaymentFormModal';
 
 export const AccountListPage: FunctionComponent = (): ReactElement => {
   const [accounts, setAccounts] = useState<Account[]>([]);
@@ -92,7 +92,7 @@ export const AccountListPage: FunctionComponent = (): ReactElement => {
       })}
       {isModalOpen && (
         <Modal onClose={handleOnClose}>
-          <PaymentForm />
+          <PaymentFormModal />
         </Modal>
       )}
     </>

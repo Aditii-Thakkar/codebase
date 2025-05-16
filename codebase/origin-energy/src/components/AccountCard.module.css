@@ -64,6 +64,10 @@
     text-transform: capitalize;
 }
 
+.address{
+    font-size: 13px;
+}
+
 .makePaymentBtn{
     width: 200px;
     color:red;
@@ -71,6 +75,3 @@
     margin-top: 1rem;
 }
 
-.address{
-    font-size: 13px;
-}

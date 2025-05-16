@@ -1,5 +1,5 @@
 import { useState, type FunctionComponent, type ReactElement } from 'react';
-import styles from './PaymentForm.module.css';
+import styles from './PaymentFormModal.module.css';
 
 type CardDetails = {
   cardNumber: string;
@@ -8,7 +8,7 @@ type CardDetails = {
   amount: number;
 };
 
-export const PaymentForm: FunctionComponent = (): ReactElement => {
+export const PaymentFormModal: FunctionComponent = (): ReactElement => {
   const [isPaying, setIsPaying] = useState(false);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [formData, setFormData] = useState<CardDetails>({
