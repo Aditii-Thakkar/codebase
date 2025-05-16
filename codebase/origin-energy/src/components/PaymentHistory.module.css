@@ -1,0 +1,47 @@
+.paymentHistoryContainer {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  max-width: 600px;
+  background-color: #fff;
+}
+
+.searchInput {
+  width: 50%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 500;
+  display:flex;
+  align-items: flex-start;
+}
+
+.address {
+  font-size: 13px;
+  color: #555;
+}
+
+.amount {
+  font-size: 14px;
+  font-weight: bold;
+}
