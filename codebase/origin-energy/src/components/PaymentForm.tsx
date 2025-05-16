@@ -22,11 +22,11 @@ export const PaymentForm: FunctionComponent = (): ReactElement => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: name === 'amount' ? parseFloat(value) || 0 : value,
     }));
   };
 
-  const handleSubmit = async (event: React.FocusEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsPaying(true);
     try {
@@ -38,7 +38,7 @@ export const PaymentForm: FunctionComponent = (): ReactElement => {
 
       setPaymentSuccess(true);
     } catch (err) {
-      alert('Payment failed.');
+      console.log('Payment failed.');
     } finally {
       setIsPaying(false);
     }
@@ -62,7 +62,7 @@ export const PaymentForm: FunctionComponent = (): ReactElement => {
           <label htmlFor="cardNumber">How would you like to pay</label>
           <input
             id="cardNumber"
-            type="number"
+            type="text"
             placeholder="Card Number"
             name="cardNumber"
             className={styles.input}
@@ -76,13 +76,13 @@ export const PaymentForm: FunctionComponent = (): ReactElement => {
               name="expiry"
               placeholder="MM/YY"
               pattern="^(0[1-9]|1[0-2])\/\d{2}$"
-              max="5"
+              maxLength={5}
               className={`${styles.input} ${styles.cardExpiryInput}`}
               onChange={handleChange}
               required
             />
             <input
-              type="number"
+              type="text"
               name="cvv"
               placeholder="CVV"
               className={`${styles.input} ${styles.cardExpiryInput}`}
