@@ -17,6 +17,7 @@ export const AccountListPage: FunctionComponent = (): ReactElement => {
   const [dueCharges, setDueCharges] = useState<DueCharge[]>([]);
   const [filterredData, setFilteredData] = useState<Account[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadData() {
@@ -27,6 +28,7 @@ export const AccountListPage: FunctionComponent = (): ReactElement => {
       setAccounts(accoutnsData);
       setDueCharges(dueChargesData);
       setFilteredData(accoutnsData);
+      setLoading(false);
     }
     loadData();
   }, []);
@@ -68,6 +70,10 @@ export const AccountListPage: FunctionComponent = (): ReactElement => {
       </div>
     );
   };
+
+  if (loading) {
+    return <div>Loading account list...</div>;
+  }
 
   return (
     <>
