@@ -1,0 +1,76 @@
+.accountCardContainer{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 12px;
+    color: black;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+.accountHeader{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.icon{
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 100px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 8px;
+    color: black;
+    margin: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.accountBalanceContainer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.balancePositive{
+    color: green;
+}
+
+.balanceNegative{
+    color: red;
+}
+
+.balanceZero{
+    color:grey
+}
+
+.eneryType{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.makePaymentBtn{
+    width: 200px;
+    color:red;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.address{
+    font-size: 13px;
+}

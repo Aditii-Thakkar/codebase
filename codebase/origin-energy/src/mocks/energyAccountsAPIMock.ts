@@ -1,5 +1,6 @@
+import type { Account } from "../types/AccountList";
 
-const accounts: [] = [
+const accounts: Account[] = [
     {
         id: "A-0001",
         type: "ELECTRICITY",
@@ -56,7 +57,7 @@ const accounts: [] = [
     },
 ];
 
-export function MOCK_ENERGY_ACCOUNTS_API(): Promise<[]> {
+export function MOCK_ENERGY_ACCOUNTS_API(): Promise<Account[]> {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(accounts);
