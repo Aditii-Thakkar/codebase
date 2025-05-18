@@ -67,3 +67,19 @@ MOCK_ENERGY_ACCOUNTS_API(): Promise<Account[]>
 MOCK_DUE_CHARGES_API(): Promise<DueCharge[]>
 MOCK_ENERGY_PAYMENT_HISTORY_API():Promise<Payment[]>
 ```
+
+### To start the project, you will need a recent version of node.js.
+
+From there, run:
+
+```
+npm install
+npm run dev
+```
+
+### You can add comments where and how you'd expand given more time
+
+- Polished UI: I would improve the UI across all pages—particularly enhancing the consistency and responsiveness of the filter controls, account list, search input, and payment history layout. Adding more accessible markup and improving the visual hierarchy would also elevate usability.
+- Debounce for Search: I’d introduce a debounce mechanism to the address search input. This would reduce unnecessary re-renders and improve performance, especially as the dataset grows or if we move filtering to an API in the future.
+- Unit Testing: I would add unit tests for key utility functions like formatDate and getBalanceAttributes. This would ensure these helpers behave consistently under various edge cases and make the codebase more robust and maintainable.
+- Form Validation Enhancements (optional suggestion): For the payment form, I’d enhance validation using a schema-based approach (e.g., with Zod or Yup), making the validation logic more declarative and testable.
