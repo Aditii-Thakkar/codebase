@@ -6,7 +6,7 @@ import {
 } from 'react';
 import { MOCK_ENERGY_PAYMENT_HISTORY_API } from '../mocks/paymentHistoryAPIMock';
 import type { PaymentHistory } from '../types/PaymentHistory';
-import styles from './PaymentHistory.module.css';
+import styles from './PaymentHistoryPage.module.css';
 import { formatDate } from '../utils/commonUtil';
 
 export const PaymentHistoryPage: FunctionComponent = (): ReactElement => {
